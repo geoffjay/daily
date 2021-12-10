@@ -1,0 +1,32 @@
+*~
+*.sw[op]
+.DS_Store
+
+# development files
+.coverage
+.venv
+
+# jupyter notebooks
+notebooks/.ipynb_checkpoints/
+notebooks/*.ipynb
+!notebooks/sample.ipynb
+
+# python
+__pycache__/
+
+# configuration
+.env
+config.ini
+config/settings/local.py
+
+# app
+app/.yarn/
+app/node_modules/
+app/coverage
+app/dist
+app/tests/e2e/screenshots/
+app/tests/e2e/videos/
+
+# logs
+api/logs/
+!api/logs/.keep

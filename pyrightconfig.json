@@ -1,0 +1,17 @@
+{
+  "venvPath" : ".",
+  "venv": ".venv",
+  "typingsPath": "./typestubs",
+
+  "reportTypeshedErrors": false,
+  "reportMissingImports": true,
+  "reportMissingTypeStubs": false,
+
+  "executionEnvironments": [
+    {
+      "root": "api/",
+      "venv": "ded",
+      "extraPaths": []
+    }
+  ]
+}
