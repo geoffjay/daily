@@ -16,8 +16,12 @@ __pycache__/
 
 # configuration
 .env
+.envrc
 config.ini
 config/settings/local.py
+
+# api
+schema.graphql
 
 # app
 app/.yarn/
