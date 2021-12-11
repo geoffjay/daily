@@ -1,0 +1,63 @@
+{
+  "name": "ded",
+  "version": "0.1.0",
+  "description": "Do Every Day",
+  "main": "./build/cli.js",
+  "bin": {
+    "ded": "./build/cli.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "/build"
+  ],
+  "scripts": {
+    "cli:build": "tsc",
+    "cli:pkg:linux": "pkg . --targets node14-linux-x64 --output bin/linux/ded",
+    "cli:pkg:macos": "pkg . --targets node14-macos-x64 --output bin/macos/ded",
+    "cli:run": "node build/cli.js",
+    "lint:check": "eslint \"src/**/*.ts\"",
+    "lint:ts": "eslint \"src/**/*.ts\" --fix",
+    "fmt:check": "prettier --list-different .",
+    "fmt:prettier": "prettier --ignore-path .gitignore --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/geoffjay/ded.git"
+  },
+  "author": "Geoff Johnson <geoff.jay@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/geoffjay/ded/issues"
+  },
+  "homepage": "https://github.com/geoffjay/ded#readme",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "ava": "^3.15.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "pkg": "^5.5.1",
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.3"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js"
+  },
+  "ava": {
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ]
+  }
+}

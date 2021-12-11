@@ -4,33 +4,11 @@
 
 # development files
 .coverage
-.venv
-
-# jupyter notebooks
-notebooks/.ipynb_checkpoints/
-notebooks/*.ipynb
-!notebooks/sample.ipynb
-
-# python
-__pycache__/
 
 # configuration
 .env
 .envrc
-config.ini
-config/settings/local.py
-
-# api
-schema.graphql
 
 # app
-app/.yarn/
-app/node_modules/
-app/coverage
-app/dist
-app/tests/e2e/screenshots/
-app/tests/e2e/videos/
-
-# logs
-api/logs/
-!api/logs/.keep
+build/
+node_modules/
