@@ -1,21 +1,21 @@
 {
-  "name": "ded",
+  "name": "daily",
   "version": "0.0.1",
-  "description": "Do Every Day",
+  "description": "Do Things Daily",
   "main": "./build/cli.js",
   "bin": {
-    "ded": "./build/cli.js"
+    "daily": "./build/cli.js"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "files": [
     "/build"
   ],
   "scripts": {
     "cli:build": "tsc",
-    "cli:pkg:linux": "pkg . --targets node14-linux-x64 --output bin/linux/ded",
-    "cli:pkg:macos": "pkg . --targets node14-macos-x64 --output bin/macos/ded",
+    "cli:pkg:linux": "pkg . --targets node14-linux-x64 --output bin/linux/daily",
+    "cli:pkg:macos": "pkg . --targets node14-macos-x64 --output bin/macos/daily",
     "cli:run": "node build/cli.js",
     "lint:check": "eslint \"src/**/*.ts\"",
     "lint:ts": "eslint \"src/**/*.ts\" --fix",
@@ -25,14 +25,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geoffjay/ded.git"
+    "url": "git+https://github.com/geoffjay/daily.git"
   },
   "author": "Geoff Johnson <geoff.jay@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/geoffjay/ded/issues"
+    "url": "https://github.com/geoffjay/daily/issues"
   },
-  "homepage": "https://github.com/geoffjay/ded#readme",
+  "homepage": "https://github.com/geoffjay/daily#readme",
   "dependencies": {
     "chalk": "^5.0.0",
     "commander": "^8.3.0"
