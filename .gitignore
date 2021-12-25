@@ -10,5 +10,6 @@
 .envrc
 
 # app
-build/
-node_modules/
+/cli/bin/
+/cli/build/
+/cli/node_modules/

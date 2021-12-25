@@ -1,6 +1,6 @@
 {
   "name": "ded",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Do Every Day",
   "main": "./build/cli.js",
   "bin": {
