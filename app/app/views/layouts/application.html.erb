@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-controller="theme">
   <head>
     <title>App</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +10,7 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body class="bg-sky-100">
+  <body class="bg-sky-100 dark:bg-gray-900 font-mono">
     <%= yield %>
   </body>
 </html>
