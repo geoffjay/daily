@@ -1,0 +1,31 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  NewCops: enable
+
+Lint/MissingCopEnableDirective:
+  Enabled: false
+
+Rails:
+  Enabled: true
+
+Rails/FilePath:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
