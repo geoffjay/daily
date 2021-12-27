@@ -1,2 +1,6 @@
 # package directories
 node_modules/
+vendor/
+
+# build files
+app/assets/builds

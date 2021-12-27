@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :users, only: %i[new create]
 
   # authorization endpoints
-  scope module: '/auth' do
+  namespace 'auth' do
     get '/register', to: 'registrations#new'
     post '/register', to: 'registrations#create'
 
