@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[new create]
 
+  # admin endpoints
+  namespace 'admin' do
+    get '/themes', to: 'themes#index'
+  end
+
   # authorization endpoints
   namespace 'auth' do
     get '/register', to: 'registrations#new'

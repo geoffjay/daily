@@ -7,6 +7,6 @@ class ApplicationController < ActionController::Base
 
   def require_user_login!
     # use as `before_action :require_user_login!`
-    redirect_to login_path, alert: 'You must be logged in' if Current.user.nil?
+    redirect_to auth_login_path, alert: 'You must be logged in' if Current.user.nil?
   end
 end

@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html data-controller="theme">
-  <head>
-    <title>App</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <%= render 'partials/head' %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+  <body class="bg-sky-100 dark:bg-gray-900 text-slate-600 dark:text-gray-400 font-mono h-screen flex flex-col justify-between">
+    <header class="my-2">
+      <%= render 'partials/flash' %>
+      <%= render 'partials/nav' %>
+    </header>
 
-  <body class="bg-sky-100 dark:bg-gray-900 font-mono">
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+
+    <footer class="relative bg-sky-100 dark:bg-gray-900 pt-8 pb-6">
+      <%= render 'partials/footer' %>
+    </footer>
   </body>
 </html>
