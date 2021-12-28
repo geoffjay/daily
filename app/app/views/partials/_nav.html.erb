@@ -1,8 +1,12 @@
-<nav class="bg-sky-100 dark:bg-gray-900 flex flex-row items-end">
+<nav class="bg-sky-100 dark:bg-gray-900 flex flex-row items-end py-2">
   <div class="w-full"></div>
-  <div class="text-gray-500 dark:text-gray-400 text-sm p-3">
-    <a href="/auth/login">login</a>
-  </div>
+    <div class="text-gray-500 dark:text-gray-400 text-sm p-3">
+      <% if not logged_in? %>
+        <%= link_to "login", auth_login_path %>
+      <% else %>
+        <%= button_to "logout", auth_logout_path, method: :delete %>
+      <% end %>
+    </div>
   <div class="h-12 pr-2">
     <button
       data-action="click->theme#toggle"
