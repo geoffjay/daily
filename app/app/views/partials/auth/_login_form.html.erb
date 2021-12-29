@@ -1,0 +1,47 @@
+<%= render "partials/components/card" do %>
+  <%= form_with(
+    model: @user,
+    builder: TailwindFormBuilder,
+    html: { novalidate: true },
+    url: auth_login_path,
+  ) do |f| %>
+    <span class="text-red-400 mr-1">*</span>
+    <%= f.label :email %>
+    <%= f.text_field :email, placeholder: "name@company.com", required: true %>
+    <span class="text-red-400 mr-1">*</span>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: "password", required: true %>
+    <div class="mt-6 relative">
+      <div class="<%= button_class(variant: "expanded", theme: "primary") %>">
+        <%= f.submit "Submit" %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="flex items-start">
+    <div class="flex items-start">
+      <div class="flex items-center h-5">
+        <input
+          id="remember"
+          aria-describedby="remember"
+          type="checkbox"
+          class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+          required=""
+        >
+      </div>
+      <div class="text-sm ml-3">
+        <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+      </div>
+    </div>
+    <a href="#" class="text-sm text-blue-700 hover:underline ml-auto dark:text-blue-500">
+      Lost Password?
+    </a>
+  </div>
+
+  <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+    Not registered?
+    <a href="/" class="text-blue-700 hover:underline dark:text-blue-500">
+      Create account
+    </a>
+  </div>
+<% end %>
