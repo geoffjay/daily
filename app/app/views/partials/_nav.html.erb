@@ -1,6 +1,6 @@
-<nav class="bg-sky-100 dark:bg-gray-900 flex flex-row items-end py-2">
+<nav class="bg-cobalt-100 dark:bg-cobalt-800 flex flex-row items-end py-2">
   <div class="w-full"></div>
-    <div class="text-gray-500 dark:text-gray-400 text-sm p-3">
+    <div class="text-slate-500 dark:text-slate-400 text-sm p-3">
       <% if not logged_in? %>
         <%= link_to "login", auth_login_path %>
       <% else %>
@@ -12,7 +12,7 @@
       data-action="click->theme#toggle"
       id="theme-toggle"
       type="button"
-      class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-0 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-xl text-sm p-3"
+      class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:ring-0 focus:ring-slate-200 dark:focus:ring-slate-700 rounded-xl text-sm p-3"
     >
       <svg
         id="theme-toggle-dark-icon"

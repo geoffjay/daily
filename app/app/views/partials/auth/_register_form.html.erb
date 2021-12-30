@@ -5,14 +5,14 @@
     html: { novalidate: true },
     url: auth_register_path,
   ) do |f| %>
-    <span class="text-red-400 mr-1">*</span>
+    <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
     <%= f.label :email %>
     <%= f.text_field :email, placeholder: "john.doe@example.com", required: true %>
     <%= f.label :first_name %>
     <%= f.text_field :first_name, placeholder: "John" %>
     <%= f.label :last_name %>
     <%= f.text_field :last_name, placeholder: "Doe" %>
-    <span class="text-red-400 mr-1">*</span>
+    <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
     <%= f.label :password %>
     <%= f.password_field :password, placeholder: "password", required: true %>
     <div class="mt-6 relative">

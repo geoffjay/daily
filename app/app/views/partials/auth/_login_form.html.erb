@@ -5,10 +5,10 @@
     html: { novalidate: true },
     url: auth_login_path,
   ) do |f| %>
-    <span class="text-red-400 mr-1">*</span>
+    <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
     <%= f.label :email %>
     <%= f.text_field :email, placeholder: "name@company.com", required: true %>
-    <span class="text-red-400 mr-1">*</span>
+    <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
     <%= f.label :password %>
     <%= f.password_field :password, placeholder: "password", required: true %>
     <div class="mt-6 relative">
@@ -25,22 +25,22 @@
           id="remember"
           aria-describedby="remember"
           type="checkbox"
-          class="bg-gray-50 border border-gray-300 focus:ring-3 focus:ring-blue-300 h-4 w-4 rounded dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+          class="bg-slate-100 border border-slate-300 focus:ring-3 focus:ring-cobalt-300 h-4 w-4 rounded dark:bg-slate-700 dark:border-slate-600 dark:focus:ring-cobalt-600 dark:ring-offset-slate-800"
           required=""
         >
       </div>
       <div class="text-sm ml-3">
-        <label for="remember" class="font-medium text-gray-900 dark:text-gray-300">Remember me</label>
+        <label for="remember" class="font-medium text-slate-900 dark:text-slate-300">Remember me</label>
       </div>
     </div>
-    <a href="#" class="text-sm text-blue-700 hover:underline ml-auto dark:text-blue-500">
+    <a href="#" class="text-sm text-cobalt-700 hover:underline ml-auto dark:text-cobalt-500">
       Lost Password?
     </a>
   </div>
 
-  <div class="text-sm font-medium text-gray-500 dark:text-gray-300">
+  <div class="text-sm font-medium text-slate-500 dark:text-slate-300">
     Not registered?
-    <a href="/" class="text-blue-700 hover:underline dark:text-blue-500">
+    <a href="/" class="text-cobalt-700 hover:underline dark:text-cobalt-500">
       Create account
     </a>
   </div>
