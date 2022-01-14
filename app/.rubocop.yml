@@ -1,10 +1,16 @@
 require:
   - rubocop-rails
   - rubocop-rspec
+  - rubocop-performance
 
 AllCops:
   DisplayCopNames: true
   NewCops: enable
+  Exclude:
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
 
 Lint/MissingCopEnableDirective:
   Enabled: false

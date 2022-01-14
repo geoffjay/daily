@@ -1,7 +1,12 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ["./app/views/**/*.html.erb", "./app/helpers/**/*.rb", "./app/javascript/**/*.js"],
+  content: [
+    "./app/assets/stylesheets/**/*.css",
+    "./app/helpers/**/*.rb",
+    "./app/javascript/**/*.js",
+    "./app/views/**/*.html.erb",
+  ],
   darkMode: "class",
   plugins: [
     require("@tailwindcss/aspect-ratio"),

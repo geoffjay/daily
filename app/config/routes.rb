@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
+  get '/dashboard', to: 'dashboard#index'
+  get '/activities/:id', to: 'activities#show'
 
   resources :users, only: %i[new create]
 
