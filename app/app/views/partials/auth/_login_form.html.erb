@@ -1,4 +1,5 @@
-<%= render "partials/components/card" do %>
+<%# app/views/partials/_login_form.html.erb %>
+<%= render CardComponent.new do %>
   <div class="flex flex-col items-start">
     <%= form_with(
       model: @user,
@@ -6,13 +7,17 @@
       html: { novalidate: true },
       url: auth_login_path,
     ) do |f| %>
-      <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
-      <%= f.label :email %>
-      <%= f.text_field :email, placeholder: "name@company.com", required: true %>
-      <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
-      <%= f.label :password %>
-      <%= f.password_field :password, placeholder: "password", required: true %>
-      <div class="mt-6 relative">
+      <div class="pb-4">
+        <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
+        <%= f.label :email %>
+        <%= f.text_field :email, placeholder: "name@company.com", required: true %>
+      </div>
+      <div class="pb-4">
+        <span class="text-crimson-600 dark:text-crimson-300 mr-1">*</span>
+        <%= f.label :password %>
+        <%= f.password_field :password, placeholder: "password", required: true %>
+      </div>
+      <div class="mt-2 relative">
         <div class="<%= button_class(variant: "expanded", theme: "primary") %>">
           <%= f.submit "Submit" %>
         </div>
